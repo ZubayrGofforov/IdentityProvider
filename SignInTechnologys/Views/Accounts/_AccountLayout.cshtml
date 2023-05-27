@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="~/css/site.css" rel="stylesheet" type="text/css" />
+    <title>Document</title>
+</head>
+
+<body style="background-image: url(https://localhost:7272/media/patterns/outro.jpeg);
+      min-height: 100vh;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;">
+    <div class="fundo">
+        <div class="caixa">
+            <div class="botao-caixa">
+                <div id="btn"></div>
+                <a asp-controller="accounts" asp-action="login" class="ativar" onclick="login()">Login</a>
+                <a asp-controller="accounts" asp-action="register" class="ativar" onclick="register()">register</a>
+
+            </div>
+            <div class="icones">
+                <a href="https://www.facebook.com/login/"><img src="~/media/patterns/fb.png" alt=""></a>
+                <a href="https://twitter.com/"><img src="~/media/patterns/tw.png" alt=""></a>
+                <a href="https://www.google.com/"> <img src="~/media/patterns/gp.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+        function register() {
+            x.style.left = "-100px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+        function login() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0";
+        }
+    </script>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+
+</html>

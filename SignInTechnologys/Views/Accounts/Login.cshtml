@@ -1,0 +1,14 @@
+﻿@using SignInTechnologys.Dtos.Accounts;
+@model AccountLoginDto
+@{
+    Layout = "_AccountLayout.cshtml";
+}
+
+<form asp-controller="accounts" asp-action="login" method="post" id="login" class="input-group" style="margin-left:565px; margin-top: 100px;">
+    <input type="email" asp-for=Email class="input-field" placeholder="Email" required>
+    <span asp-validation-for="Email" class="text-danger"></span>
+    <input type="Password" asp-for=Password class="input-field" placeholder="Password" required>
+    <span asp-validation-for="Password" class="text-danger"></span>
+    <input type="checkbox" class="check-box"><span>Remebember password</span>
+    <button type="submit" class="submit">Login</button>
+</form>
