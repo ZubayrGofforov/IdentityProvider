@@ -1,4 +1,5 @@
 ﻿namespace SignInTechnologys.Common.Exceptions;
+
 public class NotFoundException : Exception
 {
     public string Point { get; set; } = string.Empty;
