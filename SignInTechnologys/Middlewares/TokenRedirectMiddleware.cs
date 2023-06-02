@@ -7,6 +7,7 @@
         {
             this._request = request;
         }
+
         public Task InvokeAsync(HttpContext context)
         {
             if (context.Request.Cookies.TryGetValue("X-Access-Token", out var accessToken))
