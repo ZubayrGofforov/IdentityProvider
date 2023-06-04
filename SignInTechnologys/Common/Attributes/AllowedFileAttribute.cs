@@ -19,8 +19,10 @@ public class AllowedFilesAttribute : ValidationAttribute
             var extension = Path.GetExtension(file.FileName);
             if (_extensions.Contains(extension.ToLower()))
                 return ValidationResult.Success;
+            
             else return new ValidationResult("This file extension is not supperted!");
         }
+        
         else return ValidationResult.Success;
     }
 }
