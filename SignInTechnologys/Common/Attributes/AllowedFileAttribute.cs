@@ -22,7 +22,6 @@ public class AllowedFilesAttribute : ValidationAttribute
             
             else return new ValidationResult("This file extension is not supperted!");
         }
-        
         else return ValidationResult.Success;
     }
 }
