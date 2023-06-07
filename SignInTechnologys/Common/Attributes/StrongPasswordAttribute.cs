@@ -16,7 +16,6 @@ namespace SignInTechnologys.Common.Attributes
                     return new ValidationResult("Password must be less than 50 characters!");
 
                 var result = IsStrong(password);
-
                 if (result.IsValid is false) return new ValidationResult(result.Message);
 
                 return ValidationResult.Success;

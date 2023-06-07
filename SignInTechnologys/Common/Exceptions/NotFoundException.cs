@@ -6,6 +6,7 @@ public class NotFoundException : Exception
 
 	public NotFoundException(string point, string message)
 		: base(message)
+	
 	{
 		this.Point = point;
 	}
