@@ -51,7 +51,7 @@ namespace SignInTechnologys.Services
 
             if (accountRegisterDto.Image is not null)
                 user.ImagePath = await _fileService.SaveImageAsync(accountRegisterDto.Image);
-
+            
             user.CreatedAt = DateTime.UtcNow;
             user.UpdatedAt = DateTime.UtcNow;
 
