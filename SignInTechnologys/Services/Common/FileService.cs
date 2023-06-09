@@ -23,7 +23,6 @@ namespace SignInTechnologys.Services.Common
 				File.Delete(filePath);
 				return Task.FromResult(true);
 			}
-
 			catch (Exception)
 			{
 				return Task.FromResult(false);
@@ -40,7 +39,6 @@ namespace SignInTechnologys.Services.Common
 				await image.CopyToAsync(stream);
 				return Path.Combine(_images, imageName);
 			}
-
 			catch 
 			{
 				return "";
