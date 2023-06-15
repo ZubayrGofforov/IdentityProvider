@@ -43,7 +43,6 @@ namespace SignInTechnologys.Services.Common
 			{
 				return "";
 			}
-
 			finally { stream.Close(); }
 		}
 	}
